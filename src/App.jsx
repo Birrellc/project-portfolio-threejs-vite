@@ -1,7 +1,35 @@
-const App = () => {
-  const [count, setCount] = useState(0);
+import { BrowserRouter } from 'react-router-dom';
 
-  return <div>Developer Portfolio</div>;
+import {
+  About,
+  Contact,
+  Experience,
+  Navbar,
+  Tech,
+  Hero,
+  Works,
+  StarsCanvas,
+} from './components';
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <div className='relative z-0 bg-blue'>
+        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+          <Navbar />
+          <Hero />
+        </div>
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <div className='relative z-0'>
+          <Contact />
+          <StarsCanvas />
+        </div>
+      </div>
+    </BrowserRouter>
+  );
 };
 
 export default App;
