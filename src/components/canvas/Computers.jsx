@@ -12,6 +12,7 @@ const Computers = () => {
     {/* light so we can see the model */}
     {/* https://docs.pmnd.rs/react-three-fiber/getting-started/your-first-scene#adding-lights */}
     <hemisphereLight intensity={0.15} groundColor={'black'} />
+    <pointLight intensity={1} />{' '}
   </mesh>;
 };
 
